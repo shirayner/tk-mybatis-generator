@@ -12,20 +12,39 @@
     <packaging>jar</packaging>
     <artifactId>tk-mybatis-generator</artifactId>
 
+<!--
 
+    <properties>
+        &lt;!&ndash;  MyBatis Generator  &ndash;&gt;
+        &lt;!&ndash;  Java接口和实体类  &ndash;&gt;
+        <targetJavaProject>${basedir}/src/main/java</targetJavaProject>
+        <targetMapperPackage>tk.mybatis.mapper.mapper</targetMapperPackage>
+        <targetModelPackage>tk.mybatis.mapper.model</targetModelPackage>
+        &lt;!&ndash;  XML生成路径  &ndash;&gt;
+        <targetResourcesProject>${basedir}/src/main/resources</targetResourcesProject>
+        <targetXMLPackage>mapper</targetXMLPackage>
+        &lt;!&ndash;  依赖版本  &ndash;&gt;
+        <mapper.version>3.4.6</mapper.version>
+        <mysql.version>5.1.6</mysql.version>
+    </properties>
+
+-->
+
+    <!--  scan-invoice-java  -->
     <properties>
         <!--  MyBatis Generator  -->
         <!--  Java接口和实体类  -->
         <targetJavaProject>${basedir}/src/main/java</targetJavaProject>
-        <targetMapperPackage>tk.mybatis.mapper.mapper</targetMapperPackage>
-        <targetModelPackage>tk.mybatis.mapper.model</targetModelPackage>
+        <targetMapperPackage>com.hand.business.scaninvoice.inv.mapper</targetMapperPackage>
+        <targetModelPackage>com.hand.business.scaninvoice.inv.model</targetModelPackage>
         <!--  XML生成路径  -->
         <targetResourcesProject>${basedir}/src/main/resources</targetResourcesProject>
-        <targetXMLPackage>mapper</targetXMLPackage>
+        <targetXMLPackage>mapper.inv</targetXMLPackage>
         <!--  依赖版本  -->
         <mapper.version>3.4.6</mapper.version>
-        <mysql.version>5.1.6</mysql.version>
+        <oracle.version>12.1.0.1.0</oracle.version>
     </properties>
+
 
 
 
@@ -44,9 +63,9 @@
                 </configuration>
                 <dependencies>
                     <dependency>
-                        <groupId>mysql</groupId>
-                        <artifactId>mysql-connector-java</artifactId>
-                        <version>${mysql.version}</version>
+                        <groupId>com.oracle</groupId>
+                        <artifactId>ojdbc7</artifactId>
+                        <version>${oracle.version}</version>
                     </dependency>
                     <dependency>
                         <groupId>tk.mybatis</groupId>

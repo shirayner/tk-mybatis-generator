@@ -26,7 +26,7 @@
 
         <javaClientGenerator targetPackage="${targetMapperPackage}" targetProject="${targetJavaProject}" type="XMLMAPPER" />
 
-        <table tableName="%" >
+        <table tableName="INV_%" >
             <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
         </table>
     </context>
