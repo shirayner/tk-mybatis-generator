@@ -25,9 +25,24 @@
         <sqlMapGenerator targetPackage="${targetXMLPackage}"  targetProject="${targetResourcesProject}"/>
 
         <javaClientGenerator targetPackage="${targetMapperPackage}" targetProject="${targetJavaProject}" type="XMLMAPPER" />
-
-        <table tableName="INV_%" >
-            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+<!--
+        <table tableName="INV_INVOICE%" >
+            <generatedKey column="id" sqlStatement="JDBC" identity="true"/>
         </table>
+
+ -->
+
+        <!-- 数据表的映射 -->
+        <table tableName="INV_INVOICE%" >
+            <generatedKey column="id" sqlStatement="JDBC" identity="true"/>
+            <ignoreColumn column="CREATION_DATE" />
+            <ignoreColumn column="CREATED_BY" />
+            <ignoreColumn column="LAST_UPDATED_BY" />
+            <ignoreColumn column="LAST_UPDATE_DATE" />
+        </table>
+
+
+
+
     </context>
 </generatorConfiguration>
